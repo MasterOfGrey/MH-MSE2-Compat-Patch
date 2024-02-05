@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Patch for all MSE2 related functions -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<!-- Add Androids to Module Recipe Users -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/HediffDef[defName = "MSE_ModuleSurgeryBase"]/recipeUsers</xpath>
+				<value>
+					<li>ATR_Tier1Android</li>
+					<li>ATR_Tier2Android</li>
+					<li>ATR_Tier3Android</li>
+					<li>ATR_Tier4Android</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

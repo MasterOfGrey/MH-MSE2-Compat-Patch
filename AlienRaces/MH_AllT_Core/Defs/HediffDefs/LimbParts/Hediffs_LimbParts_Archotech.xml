@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Archotech recipe defs -->
+
+	<RecipeDef Abstract="True" Name="ATR_SurgeryMechanicalInstall_Limb_Archotech" ParentName="ATR_SurgeryMechanicalCybertech">
+		<workerClass>MSE2.Recipe_InstallArtificialBodyPartWithChildren</workerClass>
+		<!-- <modExtensions>
+			<li Class="MSE2.AutoRecipeUsers">
+				<fleshType>ATR_AndroidTier</fleshType>
+			</li>
+		</modExtensions> -->
+		<!-- Recipe user mod extension not required due to in-built Parent filtering? -->
+	</RecipeDef>
+
+    <!-- Archotech Arm -->
+    <RecipeDef ParentName="ATR_SurgeryMechanicalInstall_Limb_Archotech">
+		<defName>ATR_Install_MechanicalArchotechArm</defName>
+		<label>install archotech arm</label>
+		<description>Install an archotech arm.</description>
+        <descriptionHyperlinks>
+            <ThingDef>ArchotechArm</ThingDef>
+            <HediffDef>ArchotechArm</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing archotech arm.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ArchotechArm</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ArchotechArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalShoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ArchotechArm</addsHediff>
+	</RecipeDef>
+
+	<!-- Archotech Forearm -->
+	<RecipeDef ParentName="ATR_SurgeryMechanicalInstall_Limb_Archotech">
+		<defName>ATR_Install_MechanicalArchotechForearm</defName>
+		<label>Install archotech forearm</label>
+		<description>Installs an archotech forearm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ArchotechForearm</ThingDef>
+			<HediffDef>ArchotechForearm</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing archotech forearm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ArchotechForearm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ArchotechForearm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalArm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ArchotechForearm</addsHediff>
+	</RecipeDef>
+
+	<!-- Archotech Hand -->
+	<RecipeDef ParentName="ATR_SurgeryMechanicalInstall_Limb_Archotech">
+		<defName>ATR_Install_MechanicalArchotechHand</defName>
+		<label>Install archotech hand</label>
+		<description>Installs an archotech hand.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ArchotechHand</ThingDef>
+			<HediffDef>ArchotechHand</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing archotech hand.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ArchotechHand</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ArchotechHand</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalHand</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ArchotechHand</addsHediff>
+	</RecipeDef>
+
+	<!-- Archotech Finger -->
+	<RecipeDef ParentName="ATR_SurgeryMechanicalInstall_Limb_Archotech">
+		<defName>ATR_Install_MechanicalArchotechFinger</defName>
+		<label>Install archotech finger</label>
+		<description>Installs an archotech finger.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ArchotechFinger</ThingDef>
+			<HediffDef>ArchotechFinger</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing archotech finger.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ArchotechFinger</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ArchotechFinger</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalFinger</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ArchotechFinger</addsHediff>
+	</RecipeDef>
+
+
+    <!-- Archotech Leg -->
+    <RecipeDef ParentName="ATR_SurgeryMechanicalInstall_Limb_Archotech">
+		<defName>ATR_Install_MechanicalArchotechLeg</defName>
+		<label>Install archotech leg</label>
+		<description>Install an archotech leg.</description>
+        <descriptionHyperlinks>
+            <ThingDef>ArchotechLeg</ThingDef>
+            <HediffDef>ArchotechLeg</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing archotech leg.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ArchotechLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ArchotechLeg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalLeg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ArchotechLeg</addsHediff>
+	</RecipeDef>
+
+	<!-- Archotech Foot -->
+	<RecipeDef ParentName="ATR_SurgeryMechanicalInstall_Limb_Archotech">
+		<defName>ATR_Install_MechanicalArchotechFoot</defName>
+		<label>Install archotech foot</label>
+		<description>Install an archotech foot.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ArchotechFoot</ThingDef>
+			<HediffDef>ArchotechFoot</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing archotech foot.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ArchotechFoot</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ArchotechFoot</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalFoot</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ArchotechFoot</addsHediff>
+	</RecipeDef>
+
+</Defs>

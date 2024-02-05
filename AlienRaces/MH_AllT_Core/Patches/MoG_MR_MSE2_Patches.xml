@@ -1,53 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	<!-- Patch for all MSE2 allowed bionics -->
+	<!-- Patch for all MSE2 related functions -->
 	<Operation Class="PatchOperationSequence">
 		<operations>
+			<!-- Add weapon to Spacer Hands -->
+			<li Class="PatchOperationAddOrMerge">
+				<xpath>Defs/HediffDef[defName = "ATR_AdvancedHand"]</xpath>
+				<value>
+					<comps>
+						<li Class="HediffCompProperties_VerbGiver">
+							<tools>
+								<li>
+									<label>fist</label>
+									<capacities>
+										<li>Blunt</li>
+									</capacities>
+									<power>12</power>
+									<cooldownTime>2</cooldownTime>
+								</li>
+							</tools>
+						</li>
+					</comps>
+				</value>
+			</li>
+
 			<!-- Patch archotech forearm -->
-			<li Class="PatchOperationAdd">
+			<!-- <li Class="PatchOperationAdd">
 				<xpath>Defs/RecipeDef[defName = "InstallArchotechForearm"]</xpath>
 				<value>
 					<appliedOnFixedBodyParts>
 						<li>ATR_MechanicalArm</li>
 					</appliedOnFixedBodyParts>
 				</value>
-			</li>
+			</li> -->
 			<!-- Patch archotech hand -->
-			<li Class="PatchOperationAdd">
+			<!-- <li Class="PatchOperationAdd">
 				<xpath>Defs/RecipeDef[defName = "InstallArchotechHand"]</xpath>
 				<value>
 					<appliedOnFixedBodyParts>
 						<li>ATR_MechanicalHand</li>
 					</appliedOnFixedBodyParts>
 				</value>
-			</li>
+			</li> -->
 			<!-- Patch archotech finger -->
-			<li Class="PatchOperationAdd">
+			<!-- <li Class="PatchOperationAdd">
 				<xpath>Defs/RecipeDef[defName = "InstallArchotechFinger"]</xpath>
 				<value>
 					<appliedOnFixedBodyParts>
 						<li>ATR_MechanicalFinger</li>
 					</appliedOnFixedBodyParts>
 				</value>
-			</li>
+			</li> -->
 			<!-- Patch archotech leg -->
-			<li Class="PatchOperationAdd">
+			<!-- <li Class="PatchOperationAdd">
 				<xpath>Defs/RecipeDef[defName = "InstallArchotechLeg"]</xpath>
 				<value>
 					<appliedOnFixedBodyParts>
 						<li>ATR_MechanicalLeg</li>
 					</appliedOnFixedBodyParts>
 				</value>
-			</li>
+			</li> -->
 			<!-- Patch archotech foot -->
-			<li Class="PatchOperationAdd">
+			<!-- <li Class="PatchOperationAdd">
 				<xpath>Defs/RecipeDef[defName = "InstallArchotechFoot"]</xpath>
 				<value>
 					<appliedOnFixedBodyParts>
 						<li>ATR_MechanicalFoot</li>
 					</appliedOnFixedBodyParts>
 				</value>
-			</li>
+			</li> -->
 		</operations>
 	</Operation>
 

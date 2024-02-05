@@ -33,17 +33,19 @@
 
 	<!-- Use this as parent for Makeshift sub-limbs -->
 	<RecipeDef Name="ATR_SurgeryMechanicalMakeshift" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+		<workerClass>MSE2.Recipe_InstallArtificialBodyPartWithChildren</workerClass>
 		<jobString>Replacing component.</jobString>
 		<skillRequirements>
 			<Crafting>2</Crafting>
 		</skillRequirements>
 		<workAmount>1350</workAmount>
 		<anesthetize>false</anesthetize>
-		<modExtensions>
+		<!-- <modExtensions>
 			<li Class="MSE2.AutoRecipeUsers">
 				<fleshType>ATR_AndroidTier</fleshType>
 			</li>
-		</modExtensions>
+		</modExtensions> -->
+		<!-- Recipe user mod extension not required due to in-built Parent filtering? -->
 	</RecipeDef>
 	
 	<!-- Makeshift Leg -->

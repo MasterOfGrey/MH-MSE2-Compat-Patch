@@ -18,6 +18,12 @@
 				</value>
 			</li>
 			<!-- Patch Makeshift LEG Operation -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementLeg"]</xpath>
+				<value>
+					<workerClass>MSE2.Recipe_InstallArtificialBodyPartWithChildren</workerClass>
+				</value>
+			</li>
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementLeg"]/ingredients</xpath>
 				<value>
@@ -43,7 +49,8 @@
 					</fixedIngredientFilter>
 				</value>
 			</li>
-			<li Class="PatchOperationAdd">
+			<!-- Recipe user mod extension not required due to in-built Parent filtering? -->
+			<!-- <li Class="PatchOperationAdd">
 				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementLeg"]</xpath>
 				<value>
 					<modExtensions>
@@ -52,7 +59,7 @@
 						</li>
 					</modExtensions>
 				</value>
-			</li>
+			</li> -->
 			<!-- Patch Makeshift ARM Hediff -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/HediffDef[defName = "ATR_MakeshiftMechArm"]</xpath>
@@ -61,6 +68,12 @@
 				</value>
 			</li>
 			<!-- Patch Makeshift ARM Operation -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementArm"]</xpath>
+				<value>
+					<workerClass>MSE2.Recipe_InstallArtificialBodyPartWithChildren</workerClass>
+				</value>
+			</li>
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementArm"]/ingredients</xpath>
 				<value>
@@ -86,7 +99,8 @@
 					</fixedIngredientFilter>
 				</value>
 			</li>
-			<li Class="PatchOperationAdd">
+			<!-- Recipe user mod extension not required due to in-built Parent filtering? -->
+			<!-- <li Class="PatchOperationAdd">
 				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementArm"]</xpath>
 				<value>
 					<modExtensions>
@@ -95,7 +109,13 @@
 						</li>
 					</modExtensions>
 				</value>
-			</li>
+			</li> -->
+
+			<!-- Remove redundant operations from ATR Core. -->
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName = "ATR_Install_AdvancedArm"]</xpath></li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName = "ATR_Install_AdvancedLeg"]</xpath></li>
 
 
 			<!-- Patch MSE2 modExtension into Spacer Body Part Installation Surgeries

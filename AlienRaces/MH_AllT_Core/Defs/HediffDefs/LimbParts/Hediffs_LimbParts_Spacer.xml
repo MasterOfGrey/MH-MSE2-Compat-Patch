@@ -10,85 +10,14 @@
 	</ThingDef>
 
 	<RecipeDef Abstract="True" Name="ATR_SurgeryMechanicalInstall_Limb_Spacer" ParentName="ATR_SurgeryMechanicalSpacer">
-		<modExtensions>
+		<workerClass>MSE2.Recipe_InstallArtificialBodyPartWithChildren</workerClass>
+		<!-- <modExtensions>
 			<li Class="MSE2.AutoRecipeUsers">
 				<fleshType>ATR_AndroidTier</fleshType>
 			</li>
-		</modExtensions>
+		</modExtensions> -->
+		<!-- Recipe user mod extension not required due to in-built Parent filtering? -->
 	</RecipeDef>
-
-	<!-- Advanced internal support -->
-
-	<!-- <HediffDef ParentName="ATR_AddedBodyPart_Limb_SpacerBase">
-		<defName>ATR_AdvancedInternalSupport</defName>
-		<label>Advanced internal support</label>
-		<labelNoun>an advanced internal support</labelNoun>
-		<description>An installed advanced internal support.</description>
-		<descriptionHyperlinks>
-			<ThingDef>ATR_AdvancedInternalSupport</ThingDef>
-		</descriptionHyperlinks>
-		<spawnThingOnRemoved>ATR_AdvancedInternalSupport</spawnThingOnRemoved>
-	</HediffDef> -->
-
-	<!-- <ThingDef ParentName="ATR_BodyPart_Limb_SpacerBase">
-		<defName>ATR_AdvancedInternalSupport</defName>
-		<label>Advanced internal support</label>
-		<description>An advanced artificial internal support. Useful replacement to have on hand for when an internal component of an advanced prosthesis breaks.</description>
-		<descriptionHyperlinks>
-			<RecipeDef>InstallATR_AdvancedInternalSupport</RecipeDef>
-		</descriptionHyperlinks>
-		<costList>
-			<Plasteel>8</Plasteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<WorkToMake>3000</WorkToMake>
-			<Mass>0.8</Mass>
-		</statBases>
-	</ThingDef> -->
-
-	<!-- <RecipeDef ParentName="ATR_SurgeryMechanicalInstall_Limb_Spacer">
-		<defName>InstallATR_AdvancedInternalSupport</defName>
-		<label>Install advanced internal support</label>
-		<description>Install an advanced internal support.</description>
-		<descriptionHyperlinks>
-			<ThingDef>ATR_AdvancedInternalSupport</ThingDef>
-			<HediffDef>ATR_AdvancedInternalSupport</HediffDef>
-		</descriptionHyperlinks>
-		<jobString>Installing advanced internal support.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ATR_AdvancedInternalSupport</li>
-					</thingDefs>
-				</filter>
-				<count>1</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>ATR_AdvancedInternalSupport</li>
-			</thingDefs>
-		</fixedIngredientFilter> -->
-		<!-- <appliedOnFixedBodyParts>
-			<li>Clavicle</li>
-			<li>Humerus</li>
-			<li>Radius</li>
-			<li>Femur</li>
-			<li>Tibia</li>
-		</appliedOnFixedBodyParts> -->
-		<!-- <addsHediff>ATR_AdvancedInternalSupport</addsHediff>
-		<modExtensions>
-			<li Class="MSE2.InstallationRestrictions">
-				<whitelist>
-					<li>ATR_AdvancedArm</li>
-					<li>ATR_AdvancedForeArm</li>
-					<li>ATR_AdvancedLeg</li>
-				</whitelist>
-			</li>
-		</modExtensions>
-	</RecipeDef> -->
 
 	<!-- Advanced arm -->
 
@@ -127,7 +56,7 @@
 		<comps>
 			<li Class="MSE2.CompProperties_IncludedChildParts">
 				<standardChildren>
-					<li>ATR_AdvancedForeArm</li>
+					<li>ATR_AdvancedForearm</li>
 				</standardChildren>
 			</li>
 				<!-- Removed <li>ATR_AdvancedInternalSupport</li> -->
@@ -167,12 +96,12 @@
 	<!-- Advanced forearm -->
 
 	<HediffDef ParentName="ATR_AddedBodyPart_Limb_SpacerBase">
-		<defName>ATR_AdvancedForeArm</defName>
+		<defName>ATR_AdvancedForearm</defName>
 		<label>Advanced forearm</label>
 		<labelNoun>an advanced forearm</labelNoun>
 		<description>Higher plasteel temperance with higher efficiency components grants this forearm a significant advantage over standard issue parts.</description>
-		<descriptionHyperlinks><ThingDef>ATR_AdvancedForeArm</ThingDef></descriptionHyperlinks>
-		<spawnThingOnRemoved>ATR_AdvancedForeArm</spawnThingOnRemoved>
+		<descriptionHyperlinks><ThingDef>ATR_AdvancedForearm</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>ATR_AdvancedForearm</spawnThingOnRemoved>
 		<comps>
 			<li Class="MSE2.HediffCompProperties_ModuleHolder">
 				<maxModules>1</maxModules>
@@ -181,10 +110,10 @@
 	</HediffDef>
 
 	<ThingDef ParentName="ATR_BodyPart_Limb_SpacerBase">
-		<defName>ATR_AdvancedForeArm</defName>
+		<defName>ATR_AdvancedForearm</defName>
 		<label>Advanced forearm</label>
 		<description>Higher plasteel temperance with higher efficiency components grants this forearm a significant advantage over standard issue parts.</description>
-		<descriptionHyperlinks><RecipeDef>InstallATR_AdvancedForeArm</RecipeDef></descriptionHyperlinks>
+		<descriptionHyperlinks><RecipeDef>InstallATR_AdvancedForearm</RecipeDef></descriptionHyperlinks>
 		<costList>
 			<Steel>25</Steel>
 			<Plasteel>30</Plasteel>
@@ -205,24 +134,20 @@
 		</comps>
 	</ThingDef>
 
-ATR_MechanicalHand
-ATR_MechanicalHand
-
-
 	<RecipeDef ParentName="ATR_SurgeryMechanicalInstall_Limb_Spacer">
-		<defName>InstallATR_AdvancedForeArm</defName>
+		<defName>InstallATR_AdvancedForearm</defName>
 		<label>Install advanced forearm</label>
 		<description>Installs an advanced forearm.</description>
 		<descriptionHyperlinks>
-			<ThingDef>ATR_AdvancedForeArm</ThingDef>
-			<HediffDef>ATR_AdvancedForeArm</HediffDef>
+			<ThingDef>ATR_AdvancedForearm</ThingDef>
+			<HediffDef>ATR_AdvancedForearm</HediffDef>
 		</descriptionHyperlinks>
 		<jobString>Installing Advanced forearm.</jobString>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>ATR_AdvancedForeArm</li>
+						<li>ATR_AdvancedForearm</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -230,13 +155,13 @@ ATR_MechanicalHand
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>ATR_AdvancedForeArm</li>
+				<li>ATR_AdvancedForearm</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
 			<li>ATR_MechanicalArm</li>
 		</appliedOnFixedBodyParts>
-		<addsHediff>ATR_AdvancedForeArm</addsHediff>
+		<addsHediff>ATR_AdvancedForearm</addsHediff>
 	</RecipeDef>
 
 	<!-- Advanced hand -->
@@ -248,18 +173,6 @@ ATR_MechanicalHand
 		<description>Higher plasteel temperance with higher efficiency components grants this hand a significant advantage over standard issue parts.</description>
 		<descriptionHyperlinks><ThingDef>ATR_AdvancedHand</ThingDef></descriptionHyperlinks>
 		<comps>
-			<li Class="HediffCompProperties_VerbGiver">
-				<tools>
-					<li>
-						<label>fist</label>
-						<capacities>
-							<li>Blunt</li>
-						</capacities>
-						<power>12</power>
-						<cooldownTime>2</cooldownTime>
-					</li>
-				</tools>
-			</li>
 			<li Class="MSE2.HediffCompProperties_ModuleHolder">
 				<maxModules>2</maxModules>
 			</li>
@@ -519,5 +432,79 @@ ATR_MechanicalHand
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AdvancedFoot</addsHediff>
 	</RecipeDef>
+
+
+	<!-- Advanced internal support -->
+
+	<!-- <HediffDef ParentName="ATR_AddedBodyPart_Limb_SpacerBase">
+		<defName>ATR_AdvancedInternalSupport</defName>
+		<label>Advanced internal support</label>
+		<labelNoun>an advanced internal support</labelNoun>
+		<description>An installed advanced internal support.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ATR_AdvancedInternalSupport</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>ATR_AdvancedInternalSupport</spawnThingOnRemoved>
+	</HediffDef> -->
+
+	<!-- <ThingDef ParentName="ATR_BodyPart_Limb_SpacerBase">
+		<defName>ATR_AdvancedInternalSupport</defName>
+		<label>Advanced internal support</label>
+		<description>An advanced artificial internal support. Useful replacement to have on hand for when an internal component of an advanced prosthesis breaks.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>InstallATR_AdvancedInternalSupport</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>8</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>3000</WorkToMake>
+			<Mass>0.8</Mass>
+		</statBases>
+	</ThingDef> -->
+
+	<!-- <RecipeDef ParentName="ATR_SurgeryMechanicalInstall_Limb_Spacer">
+		<defName>InstallATR_AdvancedInternalSupport</defName>
+		<label>Install advanced internal support</label>
+		<description>Install an advanced internal support.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ATR_AdvancedInternalSupport</ThingDef>
+			<HediffDef>ATR_AdvancedInternalSupport</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing advanced internal support.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_AdvancedInternalSupport</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_AdvancedInternalSupport</li>
+			</thingDefs>
+		</fixedIngredientFilter> -->
+		<!-- <appliedOnFixedBodyParts>
+			<li>Clavicle</li>
+			<li>Humerus</li>
+			<li>Radius</li>
+			<li>Femur</li>
+			<li>Tibia</li>
+		</appliedOnFixedBodyParts> -->
+		<!-- <addsHediff>ATR_AdvancedInternalSupport</addsHediff>
+		<modExtensions>
+			<li Class="MSE2.InstallationRestrictions">
+				<whitelist>
+					<li>ATR_AdvancedA rm</li>
+					<li>ATR_AdvancedF orearm</li>
+					<li>ATR_AdvancedL eg</li>
+				</whitelist>
+			</li>
+		</modExtensions>
+	</RecipeDef> -->
 
 </Defs>
