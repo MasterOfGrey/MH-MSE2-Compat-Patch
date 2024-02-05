@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Patch for all MH dependencies -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			
+			<!-- Patch Makeshift LEG Hediff -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/HediffDef[defName = "ATR_MakeshiftMechLeg"]</xpath>
+				<value>
+					<spawnThingOnRemoved>ATR_MakeshiftMechLeg</spawnThingOnRemoved>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/HediffDef[defName = "ATR_MakeshiftMechLeg"]/description</xpath>
+				<value>
+					<description>An installed makeshift leg, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of defined feet or any toes, it is still significantly inferior to a properly designed and manufactured leg.</description>
+				</value>
+			</li>
+			<!-- Patch Makeshift LEG Operation -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementLeg"]/ingredients</xpath>
+				<value>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ATR_MakeshiftMechLeg</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementLeg"]/fixedIngredientFilter</xpath>
+				<value>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ATR_MakeshiftMechLeg</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementLeg"]</xpath>
+				<value>
+					<modExtensions>
+						<li Class="MSE2.AutoRecipeUsers">
+							<fleshType>ATR_AndroidTier</fleshType>
+						</li>
+					</modExtensions>
+				</value>
+			</li>
+			<!-- Patch Makeshift ARM Hediff -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/HediffDef[defName = "ATR_MakeshiftMechArm"]</xpath>
+				<value>
+					<spawnThingOnRemoved>ATR_MakeshiftMechArm</spawnThingOnRemoved>
+				</value>
+			</li>
+			<!-- Patch Makeshift ARM Operation -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementArm"]/ingredients</xpath>
+				<value>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ATR_MakeshiftMechArm</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementArm"]/fixedIngredientFilter</xpath>
+				<value>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ATR_MakeshiftMechArm</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "ATR_Install_MakeshiftReplacementArm"]</xpath>
+				<value>
+					<modExtensions>
+						<li Class="MSE2.AutoRecipeUsers">
+							<fleshType>ATR_AndroidTier</fleshType>
+						</li>
+					</modExtensions>
+				</value>
+			</li>
+
+
+			<!-- Patch MSE2 modExtension into Spacer Body Part Installation Surgeries
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[@Name = "ATR_SurgeryMechanicalSpacer"]</xpath>
+				<value>
+					<modExtensions>
+						<li Class="MSE2.AutoRecipeUsers">
+							<fleshType>ATR_AndroidTier</fleshType>
+						</li>
+					</modExtensions>
+				</value>
+			</li> -->
+			
+		</operations>
+	</Operation>
+
+</Patch>

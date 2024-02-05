@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Makeshift base Thing -->
+	<ThingDef Name="ATR_BodyPartMakeshiftBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
+		<techLevel>Industrial</techLevel>
+		<graphicData>
+			<texPath>Things/Items/BodyParts/OrganOrange</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>4</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+				<li>TableMachining</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- Use this as parent for Makeshift sub-limbs -->
+	<RecipeDef Name="ATR_SurgeryMechanicalMakeshift" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+		<jobString>Replacing component.</jobString>
+		<skillRequirements>
+			<Crafting>2</Crafting>
+		</skillRequirements>
+		<workAmount>1350</workAmount>
+		<anesthetize>false</anesthetize>
+		<modExtensions>
+			<li Class="MSE2.AutoRecipeUsers">
+				<fleshType>ATR_AndroidTier</fleshType>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+	
+	<!-- Makeshift Leg -->
+	<ThingDef ParentName="ATR_BodyPartMakeshiftBase">
+		<defName>ATR_MakeshiftMechLeg</defName>
+		<label>Makeshift mechanical leg</label>
+		<description>A makeshift leg, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of defined feet or any toes, it is still significantly inferior to a properly designed and manufactured leg.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>ATR_Install_MakeshiftReplacementLeg</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Steel>10</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="MSE2.CompProperties_IncludedChildParts">
+				<standardChildren>
+					<li>ATR_MakeshiftMechFoot</li>
+				</standardChildren>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+	<!-- Makeshift Foot -->
+	<HediffDef ParentName="ATR_AddedBodyPartIndustrialBase">
+		<defName>ATR_MakeshiftMechFoot</defName>
+		<label>Makeshift mechanical foot</label>
+		<description>An installed makeshift foot, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of toes, it is still significantly inferior to a properly designed and manufactured foot.</description>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.4</partEfficiency>
+		</addedPartProps>
+		<spawnThingOnRemoved>ATR_MakeshiftMechFoot</spawnThingOnRemoved>
+	</HediffDef>
+
+	ThingDef
+	<ThingDef ParentName="ATR_BodyPartMakeshiftBase">
+		<defName>ATR_MakeshiftMechFoot</defName>
+		<label>Makeshift mechanical foot</label>
+		<description>A makeshift foot, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of  toes, it is still significantly inferior to a properly designed and manufactured foot.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>ATR_Install_MakeshiftMechFoot</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Steel>4</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+	</ThingDef>
+
+	<RecipeDef ParentName="ATR_SurgeryMechanicalMakeshift">
+		<defName>ATR_Install_MakeshiftMechFoot</defName>
+		<label>Install makeshift mechanical foot</label>
+		<description>Installs a makeshift mechanical foot.</description>
+		<jobString>Installing makeshift mechanical foot.</jobString>
+		<surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_MakeshiftMechFoot</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_MakeshiftMechFoot</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalFoot</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_MakeshiftMechFoot</addsHediff>
+	</RecipeDef>
+
+
+	<!-- Makeshift Arm -->
+	<ThingDef ParentName="ATR_BodyPartMakeshiftBase">
+		<defName>ATR_MakeshiftMechArm</defName>
+		<label>Makeshift mechanical arm</label>
+		<description>An makeshift arm, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of distinct hands or fingers, it is still significantly inferior to a properly designed and manufactured arm.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>ATR_Install_MakeshiftReplacementArm</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Steel>10</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="MSE2.CompProperties_IncludedChildParts">
+				<standardChildren>
+					<li>ATR_MakeshiftMechHand</li>
+				</standardChildren>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- Makeshift Hand -->
+	<HediffDef ParentName="ATR_AddedBodyPartIndustrialBase">
+		<defName>ATR_MakeshiftMechHand</defName>
+		<label>Makeshift mechanical hand</label>
+		<description>An installed makeshift hand, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of definable fingers, it is still significantly inferior to a properly designed and manufactured hand.</description>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.4</partEfficiency>
+		</addedPartProps>
+		<comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>2</power>
+                        <cooldownTime>2.65</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+		<spawnThingOnRemoved>ATR_MakeshiftMechHand</spawnThingOnRemoved>
+	</HediffDef>
+
+	ThingDef
+	<ThingDef ParentName="ATR_BodyPartMakeshiftBase">
+		<defName>ATR_MakeshiftMechHand</defName>
+		<label>Makeshift mechanical hand</label>
+		<description>A makeshift hand, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of definable fingers, it is still significantly inferior to a properly designed and manufactured hand.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>ATR_Install_MakeshiftMechHand</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Steel>4</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+	</ThingDef>
+
+	<RecipeDef ParentName="ATR_SurgeryMechanicalMakeshift">
+		<defName>ATR_Install_MakeshiftMechHand</defName>
+		<label>Install makeshift mechanical hand</label>
+		<description>Installs a makeshift mechanical hand.</description>
+		<jobString>Installing makeshift mechanical hand.</jobString>
+		<surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_MakeshiftMechHand</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_MakeshiftMechHand</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalHand</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_MakeshiftMechHand</addsHediff>
+	</RecipeDef>
+
+</Defs>

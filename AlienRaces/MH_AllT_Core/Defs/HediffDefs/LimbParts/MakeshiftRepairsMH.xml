@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<HediffDef>
+		<defName>MakeshiftRepairMH</defName>
+		<label>Makeshift repair</label>
+		<labelNoun>a temporary repair to a prosthesis</labelNoun>
+		<!-- <labelNounPretty>missing a {1}</labelNounPretty> -->
+		<description>This is a temporary repair to a prosthesis, it is worse than the original part, but it is better than nothing.</description>
+
+		<hediffClass>Hediff_AddedPart</hediffClass>
+		<defaultLabelColor>(0.5, 0.5, 0.8)</defaultLabelColor>
+		<isBad>false</isBad>
+		<priceImpact>false</priceImpact>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<addedPartProps>
+			<partEfficiency>0.6</partEfficiency>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<modExtensions>
+			<li Class="MSE2.MSE_cachedStandardParents">
+				<standardParents>
+					<li>MakeshiftRepair</li>
+				</standardParents>
+			</li>
+		</modExtensions>
+		<spawnThingOnRemoved>Steel</spawnThingOnRemoved>
+	</HediffDef>
+
+	<RecipeDef ParentName="MHC_surgeryMechanicalBase">
+		<workerClass>MSE2.Surgey_MakeShiftRepair</workerClass>
+
+		<defName>MakeshiftRepairMH</defName>
+		<label>Makeshift repair</label>
+		<description>Repair a prosthesis using raw materials.</description>
+		<descriptionHyperlinks>
+			<HediffDef>MakeshiftRepair</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Repairing prosthesis.</jobString>
+
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ComponentIndustrial</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+
+		<addsHediff>MakeshiftRepair</addsHediff>
+
+		<workAmount>3500</workAmount>
+		<skillRequirements>
+			<Crafting>2</Crafting>
+		</skillRequirements>
+
+		<modExtensions>
+			<li Class="MSE2.AutoRecipeUsers">
+				<fleshType>ATR_AndroidTier</fleshType>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+</Defs>

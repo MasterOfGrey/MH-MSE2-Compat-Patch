@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Patch for all MSE2 allowed bionics -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<!-- Patch archotech forearm -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "InstallArchotechForearm"]</xpath>
+				<value>
+					<appliedOnFixedBodyParts>
+						<li>ATR_MechanicalArm</li>
+					</appliedOnFixedBodyParts>
+				</value>
+			</li>
+			<!-- Patch archotech hand -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "InstallArchotechHand"]</xpath>
+				<value>
+					<appliedOnFixedBodyParts>
+						<li>ATR_MechanicalHand</li>
+					</appliedOnFixedBodyParts>
+				</value>
+			</li>
+			<!-- Patch archotech finger -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "InstallArchotechFinger"]</xpath>
+				<value>
+					<appliedOnFixedBodyParts>
+						<li>ATR_MechanicalFinger</li>
+					</appliedOnFixedBodyParts>
+				</value>
+			</li>
+			<!-- Patch archotech leg -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "InstallArchotechLeg"]</xpath>
+				<value>
+					<appliedOnFixedBodyParts>
+						<li>ATR_MechanicalLeg</li>
+					</appliedOnFixedBodyParts>
+				</value>
+			</li>
+			<!-- Patch archotech foot -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName = "InstallArchotechFoot"]</xpath>
+				<value>
+					<appliedOnFixedBodyParts>
+						<li>ATR_MechanicalFoot</li>
+					</appliedOnFixedBodyParts>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>
