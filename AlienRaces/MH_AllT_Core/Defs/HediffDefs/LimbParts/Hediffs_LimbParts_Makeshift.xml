@@ -57,7 +57,7 @@
 			<RecipeDef>ATR_Install_MakeshiftReplacementLeg</RecipeDef>
 		</descriptionHyperlinks>
 		<costList>
-			<Steel>10</Steel>
+			<Steel>8</Steel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<comps>
@@ -91,7 +91,7 @@
 			<RecipeDef>ATR_Install_MakeshiftMechFoot</RecipeDef>
 		</descriptionHyperlinks>
 		<costList>
-			<Steel>4</Steel>
+			<Steel>2</Steel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 	</ThingDef>
@@ -133,7 +133,7 @@
 			<RecipeDef>ATR_Install_MakeshiftReplacementArm</RecipeDef>
 		</descriptionHyperlinks>
 		<costList>
-			<Steel>10</Steel>
+			<Steel>8</Steel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<comps>
@@ -180,7 +180,7 @@
 			<RecipeDef>ATR_Install_MakeshiftMechHand</RecipeDef>
 		</descriptionHyperlinks>
 		<costList>
-			<Steel>4</Steel>
+			<Steel>2</Steel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 	</ThingDef>

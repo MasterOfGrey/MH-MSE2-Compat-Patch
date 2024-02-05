@@ -7,6 +7,7 @@
 		<li IfModActive="killathon.mechhumanlikes.mechanicalbiomimetics">AlienRaces/MH_Biomimetics</li>
 		<li IfModActive="killathon.mechhumanlikes.militarytiers">AlienRaces/MH_Military</li>
 		<li IfModActive="killathon.mechhumanlikes.utilitydrones">AlienRaces/MH_Utility</li>
+		<li IfModActive="masterofgrey.muffreforgedmh">AlienRaces/MHz_MUFF</li>
 
 		<!-- main prosthetics -->
 		<!-- <li IfModNotActive="vat.epoeforked, Ykara.EPOE, Rah.RBSE">ModSpecific/None</li>
@@ -15,7 +16,7 @@
 		<li IfModActive="Rah.RBSE">ModSpecific/RBSE</li> -->
 
 		<!-- base -->
-		<li>Common</li>
-		<!-- <li>1.4</li> -->
+		<!-- <li>Common</li>
+		<li>1.4</li> -->
 	</v1.4>
 </loadFolders>

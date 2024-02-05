@@ -41,10 +41,10 @@
 		<description>Higher plasteel temperance with higher efficiency components grants this arm a significant advantage over standard issue parts.</description>
 		<descriptionHyperlinks><RecipeDef>InstallATR_AdvancedArm</RecipeDef></descriptionHyperlinks>
 		<costList>
-			<Steel>40</Steel>
-			<Plasteel>50</Plasteel>
-			<ComponentIndustrial>8</ComponentIndustrial>
-			<ComponentSpacer>2</ComponentSpacer>
+			<Steel>15</Steel>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<thingSetMakerTags>
 			<li>RewardStandardMidFreq</li>
@@ -115,9 +115,9 @@
 		<description>Higher plasteel temperance with higher efficiency components grants this forearm a significant advantage over standard issue parts.</description>
 		<descriptionHyperlinks><RecipeDef>InstallATR_AdvancedForearm</RecipeDef></descriptionHyperlinks>
 		<costList>
-			<Steel>25</Steel>
-			<Plasteel>30</Plasteel>
-			<ComponentIndustrial>6</ComponentIndustrial>
+			<Steel>15</Steel>
+			<Plasteel>18</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<statBases>
@@ -186,8 +186,8 @@
 		<description>Higher plasteel temperance with higher efficiency components grants this hand a significant advantage over standard issue parts.</description>
 		<descriptionHyperlinks><RecipeDef>InstallATR_AdvancedHand</RecipeDef></descriptionHyperlinks>
 		<costList>
-			<Steel>10</Steel>
-			<Plasteel>12</Plasteel>
+			<Steel>4</Steel>
+			<Plasteel>5</Plasteel>
 			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<thingSetMakerTags>
@@ -256,7 +256,6 @@
 		<costList>
 			<Steel>2</Steel>
 			<Plasteel>3</Plasteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<recipeMaker>
 			<productCount>5</productCount>
@@ -319,10 +318,10 @@
 		<description>Higher plasteel temperance with higher efficiency components grants this leg a significant advantage over standard issue parts.</description>
 		<descriptionHyperlinks><RecipeDef>InstallATR_AdvancedLeg</RecipeDef></descriptionHyperlinks>
 		<costList>
-			<Steel>40</Steel>
-			<Plasteel>50</Plasteel>
-			<ComponentIndustrial>8</ComponentIndustrial>
-			<ComponentSpacer>2</ComponentSpacer>
+			<Steel>30</Steel>
+			<Plasteel>35</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<thingSetMakerTags>
 			<li>RewardStandardMidFreq</li>
@@ -396,6 +395,7 @@
 			<Steel>10</Steel>
 			<Plasteel>15</Plasteel>
 			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<statBases>
 			<WorkToMake>7000</WorkToMake>
